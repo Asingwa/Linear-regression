@@ -36,8 +36,16 @@ class(data_to_clean$Month)
 # We would like this to be factor or categorical.
 
 data_to_clean$Month <- as.factor(data_to_clean$Month)
+data_columns <- as.list(names(data_to_clean))
+class(months)
+for (i in data_columns){
+  print(i)
+  d <- class(data_to_clean$i) #Does not work since it is running class(data_to_clean$i) which gives NULL since column 'i' does not exist.
+  print(d)
+  
+}
 
-class(data_to_clean$Month) 
+class(data_to_clean$Month)
 
 # Sometimes it is necessary to leave the categorical variables with numerical values. However, let's say that in
 # our case, we would like the variable month to be indicated by the month name. Let's change this
