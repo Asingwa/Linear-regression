@@ -37,7 +37,7 @@ class(data_to_clean$Month)
 
 data_to_clean$Month <- as.factor(data_to_clean$Month)
 data_columns <- as.list(names(data_to_clean))
-class(months)
+class(data_columns)
 for (i in data_columns){
   print(i)
   d <- class(data_to_clean$i) #Does not work since it is running class(data_to_clean$i) which gives NULL since column 'i' does not exist.
@@ -128,7 +128,7 @@ outlier_index <- identify(Ozone, Temp) # This allows you to click on points of i
 
 # To label the points with other values, for instance, the month
 plot(Ozone, Temp)
-outlier_index <- identify(Ozone, Temp, labels = paste(as.characMonth,Day), plot=TRUE)
+outlier_index <- identify(Ozone, Temp, labels = paste(as.character(Month,Day), plot=TRUE))
 
 # Dealing with outliers is beyond the scope of this lab session. :-)
 
